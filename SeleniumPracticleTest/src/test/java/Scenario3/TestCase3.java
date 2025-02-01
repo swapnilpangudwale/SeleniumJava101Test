@@ -24,16 +24,22 @@ public class TestCase3 extends BaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(inputFormSubmitLink));
 		inputFormSubmitLink.click();
 
+		System.out.println("clicked on input form submit link");
+		
 		Thread.sleep(1000);
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,100)");
 
+		System.out.println("scrolled to the submit button");
+		
 		Thread.sleep(1000);
 		WebElement submitButton = driver.findElement(By.xpath(locator.getProperty("submit_Button")));
 		wait.until(ExpectedConditions.elementToBeClickable(submitButton));
 
 		submitButton.click();
 
+		System.out.println("clicked on submit button");
+		
 		WebElement activeElement = driver.switchTo().activeElement();
 		String actualRequiredMsg = activeElement.getAttribute("validationMessage");
 		Thread.sleep(1000);
