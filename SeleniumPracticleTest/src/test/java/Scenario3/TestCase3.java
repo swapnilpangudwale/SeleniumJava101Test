@@ -24,6 +24,8 @@ public class TestCase3 extends BaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(inputFormSubmitLink));
 		inputFormSubmitLink.click();
 
+		System.out.println("current url is :"+driver.getCurrentURL());
+
 		System.out.println("clicked on input form submit link");
 		
 		Thread.sleep(1000);
