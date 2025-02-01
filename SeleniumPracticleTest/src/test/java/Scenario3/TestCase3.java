@@ -23,6 +23,9 @@ public class TestCase3 extends BaseTest {
 		wait.until(ExpectedConditions.elementToBeClickable(inputFormSubmitLink));
 		inputFormSubmitLink.click();
 
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,100)");
+		
 		WebElement submitButton = driver.findElement(By.xpath(locator.getProperty("submit_Button")));
 		wait.until(ExpectedConditions.elementToBeClickable(submitButton));
 
