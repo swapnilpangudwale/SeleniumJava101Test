@@ -72,10 +72,8 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.whitelistedIps", "");
 			browserOptions.addArguments("--remote-allow-origins=*");
 			// driver = new ChromeDriver(browserOptions);
-			Thread.sleep(1000);
 			driver.get(prop.getProperty("testUrl"));
 			driver.manage().window().maximize();
-			Thread.sleep(1000);
 
 		} else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			WebDriverManager.chromedriver().setup();
