@@ -29,7 +29,7 @@ public class TestCase2 extends BaseTest {
 		Actions slider = new Actions(driver);
 		slider.clickAndHold(slider15);
 
-		slider.moveByOffset(189, 0).build().perform();
+		slider.moveByOffset(212, 0).build().perform();
 
 		WebElement sliderValue = driver.findElement(By.xpath(locator.getProperty("defaultValue15_SliderValue")));
 		wait.until(ExpectedConditions.visibilityOf(sliderValue));
